@@ -1,0 +1,14 @@
+<h2>All Courses</h2>
+<ul>
+  <% courses.forEach(course => { %>
+    <li>
+      <strong><%= course.title %></strong> - <%= course.instructor %>  
+      (<%= course.seatsAvailable %> seats)
+      <form action="/admin/delete-course" method="POST" style="display:inline;">
+        <input type="hidden" name="courseId" value="<%= course._id %>">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
+<a href="/admin/create-course">Create New Course</a>

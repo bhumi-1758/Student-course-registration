@@ -1,0 +1,9 @@
+<h2>Create New Course</h2>
+<form action="/admin/create-course" method="POST">
+  <input name="title" placeholder="Course Title" required>
+  <input name="description" placeholder="Description">
+  <input name="instructor" placeholder="Instructor" required>
+  <input name="seatsAvailable" type="number" placeholder="Seats Available" required>
+  <button type="submit">Create Course</button>
+</form>
+<a href="/admin/courses">View All Courses</a>
